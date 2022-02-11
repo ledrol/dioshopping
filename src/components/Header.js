@@ -7,7 +7,7 @@ const Header = () => {
     return(
         <Grid container direction="row" justify="space-between" alignItems="center" xs={12}>
             <Typography variant='h3'>
-                Dio Shopping
+                Livraria Dio
             </Typography>
             <Link to="/">
                 <Button color="primary">Home</Button>
