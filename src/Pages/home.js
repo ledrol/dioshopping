@@ -38,10 +38,8 @@ const HomePage = () => {
     let count = { };
 
     for(let i = 0; i < arrayCategory.length; i++){
-        {
             let key = arrayCategory[i];
             count[key] = (count[key] ? count[key] + 1 : 1)
-        }
     }
 
     return(
@@ -66,7 +64,7 @@ const HomePage = () => {
                     </List>
                 </Paper>
             </Grid>
-            <Grid container xs={9} spacing={3} className={classes.root}>
+            <Grid container item xs={9} spacing={3} className={classes.root}>
                 {products.map(item => {
                     return(
                         <Card

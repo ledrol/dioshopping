@@ -11,11 +11,14 @@ const Contatos = () => {
     const [render, setRender] = useState(false);
     const [success, setSuccess] = useState(false);
 
-    useEffect(async () => {
-        const response = await fetch(url)
-        const data = await response.json();
-        setMessage(data);
-    }, [render])
+    useEffect(() => {
+        async function fetchData(){
+            const response = await fetch(url);
+            const data = await response.json();
+            setMessage(data);
+        }
+        fetchData();
+    }, [render]);
 
     const sendMessage = () => {
         setValidator(false);
@@ -53,7 +56,7 @@ const Contatos = () => {
 
     return(
         <>
-            <Grid container direction="row" xs={12}>
+            <Grid container direction="row" item xs={12}>
                 <TextField id="name" label="Name" value={author} onChange={(event)=>{setAuthor(event.target.value)}} fullWidth/>
                 <TextField id="message" label="Message" value={content} onChange={(event)=>{setContent(event.target.value)}} fullWidth/>
             </Grid>
