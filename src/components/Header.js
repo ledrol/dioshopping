@@ -10,7 +10,7 @@ const Header = () => {
                 Livraria Dio
             </Typography>
             <Link to="/">
-                <Button color="primary">Home</Button>
+                <Button color="primary">Início</Button>
             </Link>
             <Link to="/contato">
                 <Button color="primary">Contato</Button>
